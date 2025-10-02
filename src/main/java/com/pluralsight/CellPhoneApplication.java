@@ -4,40 +4,62 @@ import java.util.Scanner;
 
 public class CellPhoneApplication {
     public static void main(String[] args) {
-        CellPhone phone1 = new CellPhone();
+//        CellPhone phone1 = new CellPhone();
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("What phone do you have: ");
-        phone1.setModel(scanner.nextLine());
-        System.out.println("What is your serial number: ");
-        phone1.setSerialNumber(scanner.nextInt());
-        scanner.nextLine();
-        System.out.println("Who is your carrier: ");
-        phone1.setCarrier(scanner.nextLine());
-        System.out.println("What is your phone number:");
-        phone1.setPhoneNumber(scanner.nextLine());
-        System.out.println("What is your name: ");
-        phone1.setOwnerName(scanner.nextLine());
-        System.out.println("Enter the number you'd like to dial: ");
-
-        phone1.display();
-
-        CellPhone phone2 = new CellPhone();
-        System.out.println("What phone do you have: ");
-        phone2.setModel(scanner.nextLine());
-        System.out.println("What is your serial number: ");
-        phone2.setSerialNumber(scanner.nextInt());
-        scanner.nextLine();
-        System.out.println("Who is your carrier: ");
-        phone2.setCarrier(scanner.nextLine());
-        System.out.println("What is your phone number:");
-        phone2.setPhoneNumber(scanner.nextLine());
-        System.out.println("What is your name: ");
-        phone2.setOwnerName(scanner.nextLine());
 //
-        phone2.display();
-        phone1.dial(phone2);
-        System.out.println(" ");
-        phone2.dial(phone1);
+//        System.out.println("What phone do you have: ");
+//        phone1.setModel(scanner.nextLine());
+//        System.out.println("What is your serial number: ");
+//        phone1.setSerialNumber(scanner.nextInt());
+//        scanner.nextLine();
+//        System.out.println("Who is your carrier: ");
+//        phone1.setCarrier(scanner.nextLine());
+//        System.out.println("What is your phone number:");
+//        phone1.setPhoneNumber(scanner.nextLine());
+//        System.out.println("What is your name: ");
+//        phone1.setOwnerName(scanner.nextLine());
+//        System.out.println("Enter the number you'd like to dial: ");
+//
+//        phone1.display();
+//
+//        CellPhone phone2 = new CellPhone();
+//        System.out.println("What phone do you have: ");
+//        phone2.setModel(scanner.nextLine());
+//        System.out.println("What is your serial number: ");
+//        phone2.setSerialNumber(scanner.nextInt());
+//        scanner.nextLine();
+//        System.out.println("Who is your carrier: ");
+//        phone2.setCarrier(scanner.nextLine());
+//        System.out.println("What is your phone number:");
+//        phone2.setPhoneNumber(scanner.nextLine());
+//        System.out.println("What is your name: ");
+//        phone2.setOwnerName(scanner.nextLine());
+
+        CellPhone phone3 = new CellPhone("iPhone", 1239524, "AT&T", "4145815970", "Ajith Vaithyam");
+        phone3.display();
+
+        System.out.println("What phone do you have: ");
+        String model1 = scanner.nextLine();
+
+        System.out.println("What is your serial number: ");
+        int serialNumber = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Who is your carrier: ");
+        String carrier = scanner.nextLine();
+
+        System.out.println("What is your phone number:");
+        String phoneNumber = scanner.nextLine();
+
+        System.out.println("What is your name: ");
+        String ownerName = scanner.nextLine();
+
+        CellPhone phone4 = new CellPhone(model1, serialNumber, carrier, phoneNumber, ownerName);
+        phone4.display();
+
+//        phone2.display();
+//        phone1.dial(phone2);
+//        System.out.println(" ");
+//        phone2.dial(phone1);
     }
 }
