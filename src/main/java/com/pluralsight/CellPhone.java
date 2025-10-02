@@ -8,6 +8,7 @@ public class CellPhone {
     private String ownerName;
 
 
+
     public String getModel() {
         return model;
     }
@@ -56,9 +57,9 @@ public class CellPhone {
                 Phone Number: %s
                 Owner Name: %s
                 \n
-                """, getModel(), getSerialNumber(), getCarrier(), getPhoneNumber(),getOwnerName());
+                """, this.model, this.serialNumber, this.carrier, this.phoneNumber,this.ownerName);
     }
-    public void dial() {
-
+    public void dial(CellPhone otherPhone) {
+        System.out.printf("%s's %s is calling %s", ownerName, model, otherPhone.getPhoneNumber());
     }
 }

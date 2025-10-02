@@ -18,20 +18,26 @@ public class CellPhoneApplication {
         phone1.setPhoneNumber(scanner.nextLine());
         System.out.println("What is your name: ");
         phone1.setOwnerName(scanner.nextLine());
+        System.out.println("Enter the number you'd like to dial: ");
+
+        phone1.display();
 
         CellPhone phone2 = new CellPhone();
         System.out.println("What phone do you have: ");
         phone2.setModel(scanner.nextLine());
         System.out.println("What is your serial number: ");
         phone2.setSerialNumber(scanner.nextInt());
+        scanner.nextLine();
         System.out.println("Who is your carrier: ");
         phone2.setCarrier(scanner.nextLine());
         System.out.println("What is your phone number:");
         phone2.setPhoneNumber(scanner.nextLine());
         System.out.println("What is your name: ");
         phone2.setOwnerName(scanner.nextLine());
-
-        phone1.display();
+//
         phone2.display();
+        phone1.dial(phone2);
+        System.out.println(" ");
+        phone2.dial(phone1);
     }
 }
