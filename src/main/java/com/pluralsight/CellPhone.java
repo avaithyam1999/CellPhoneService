@@ -58,6 +58,7 @@ public class CellPhone {
                 \n
                 """, getModel(), getSerialNumber(), getCarrier(), getPhoneNumber(),getOwnerName());
     }
+    public void dial() {
 
-
+    }
 }
